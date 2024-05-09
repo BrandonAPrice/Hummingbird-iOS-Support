@@ -16,8 +16,10 @@ enum BBTRobotType {
     //UUID for the BLE adapter
     var scanningUUID: CBUUID {
         switch self {
-        case .Hummingbird, .Finch, .HummingbirdBit, .MicroBit, .Hatchling:
+        case .Hummingbird, .Finch, .HummingbirdBit, .MicroBit:
             return CBUUID(string: "6E400001-B5A3-F393-E0A9-E50E24DCCA9E")
+        case .Hatchling:
+            return CBUUID(string: "BB37A001-B922-4018-8E74-E14824B3A638")
         case .Flutter: return CBUUID(string: "BC2F4CC6-AAEF-4351-9034-D66268E328F0")
         }
     }
@@ -25,8 +27,10 @@ enum BBTRobotType {
     //UART Service UUID
     var SERVICE_UUID: CBUUID {
         switch self {
-        case .Hummingbird, .Finch, .HummingbirdBit, .MicroBit, .Hatchling:
+        case .Hummingbird, .Finch, .HummingbirdBit, .MicroBit:
             return CBUUID(string: "6E400001-B5A3-F393-E0A9-E50E24DCCA9E")
+        case .Hatchling:
+            return CBUUID(string: "BB37A001-B922-4018-8E74-E14824B3A638")
         case .Flutter: return CBUUID(string: "BC2F4CC6-AAEF-4351-9034-D66268E328F0")
         }
     }
@@ -34,8 +38,10 @@ enum BBTRobotType {
     //sending
     var TX_UUID: CBUUID {
         switch self {
-        case .Hummingbird, .Finch, .HummingbirdBit, .MicroBit, .Hatchling:
+        case .Hummingbird, .Finch, .HummingbirdBit, .MicroBit:
             return CBUUID(string: "6E400002-B5A3-F393-E0A9-E50E24DCCA9E")
+        case .Hatchling:
+            return CBUUID(string: "bb37a002-b922-4018-8e74-e14824b3a638")
         case .Flutter: return CBUUID(string: "06D1E5E7-79AD-4A71-8FAA-373789F7D93C")
         }
     }
@@ -43,8 +49,10 @@ enum BBTRobotType {
     //receiving
     var RX_UUID: CBUUID {
         switch self {
-        case .Hummingbird, .Finch, .HummingbirdBit, .MicroBit, .Hatchling:
+        case .Hummingbird, .Finch, .HummingbirdBit, .MicroBit:
             return CBUUID(string: "6E400003-B5A3-F393-E0A9-E50E24DCCA9E")
+        case .Hatchling:
+            return CBUUID(string: "bb37a003-b922-4018-8e74-e14824b3a638")
         case .Flutter: return CBUUID(string: "818AE306-9C5B-448D-B51A-7ADD6A5D314D")
         }
     }
@@ -219,6 +227,10 @@ enum BBTRobotType {
     }
     
     static func fromString(_ s: String) -> BBTRobotType? {
+        //Hatchling has a different service uuid and does not follow the regular naming conventions.
+        #if HATCHLING
+        return .Hatchling
+        #endif
         //Usually should determine type from the first 2 letters of the
         //peripheral name.
         switch s.prefix(2) {

@@ -174,10 +174,19 @@ class BBTRobotBLEPeripheral: NSObject, CBPeripheralDelegate {
         if type == .Hummingbird, let name = peripheral.name, name.starts(with: "HB") {
             print("\(self.name) will use .withResponse.")
             self.useWithResponse = true
-        } else if type == .HummingbirdBit || type == .MicroBit || type == .Finch {
+        } else if type == .HummingbirdBit || type == .MicroBit || type == .Finch || type == .Hatchling {
             //If you want to use .withResponse, you must change the
             // way that led array commands are handled.
             self.useWithResponse = false
+        }
+        
+        if type == .Hatchling {
+            //TODO: anything else here?
+            self._initialized = true
+            if let completion = self.initializationCompletion {
+                completion(self)
+            }
+            return
         }
         
         //Get ourselves a fresh slate
@@ -677,18 +686,35 @@ class BBTRobotBLEPeripheral: NSObject, CBPeripheralDelegate {
         guard let next = self.nextOutputState.neopixels, let curr = self.currentOutputState.neopixels else {
             return false
         }
-        let index = Int(port * 12)
-        return setOutput(ifCheck: port < 6, when: {
-            var eq = true
-            for i in index..<(index+12) {
+        var index = Int(port * 12)
+        
+       if intensities.count == 4 {
+          let place = intensities[3] - 1
+          index = index + Int(place * 3)
+          return setOutput(ifCheck: port < 6, when: {
+             var eq = true
+             for i in index..<(index+3) {
                 eq = eq && (next[i] == curr[i])
-            }
-            return eq
-        }, set: {
-            for i in 0..<12 {
+             }
+             return eq
+          }, set: {
+             for i in 0..<3 {
                 self.nextOutputState.neopixels?[index + i] = intensities[i]
-            }
-        })
+             }
+          })
+       } else {
+          return setOutput(ifCheck: port < 6, when: {
+             var eq = true
+             for i in index..<(index+12) {
+                eq = eq && (next[i] == curr[i])
+             }
+             return eq
+          }, set: {
+             for i in 0..<12 {
+                self.nextOutputState.neopixels?[index + i] = intensities[i]
+             }
+          })
+       }
     }
     
     func setVibration(port: Int, intensity: UInt8) -> Bool {
@@ -801,6 +827,11 @@ class BBTRobotBLEPeripheral: NSObject, CBPeripheralDelegate {
         self.writtenCondition.unlock()
         
         return isReadMode
+    }
+    
+    func sendMicroBlocksData(_ data: [UInt8]) -> Bool {
+        self.sendData(data: data)
+        return true
     }
     
     /**

@@ -67,6 +67,7 @@ class RobotRequests {
             RobotRequests.handler(fromIDAndTypeHandler: self.setServoRequest)
 		
 		server["/robot/out/stopEverything"] = self.stopAllRequest
+      server["/robot/out/portOff"] = RobotRequests.handler(fromIDAndTypeHandler: self.setPortOff)
 		server["/robot/out/led"] = RobotRequests.handler(fromIDAndTypeHandler: self.setLEDRequest)
 		server["/robot/out/vibration"] =
 			RobotRequests.handler(fromIDAndTypeHandler: self.setVibrationRequest)
@@ -93,6 +94,9 @@ class RobotRequests {
         //server["/robot/out/compass"] = RobotRequests.handler(fromIDAndTypeHandler: self.compassRequest)
 		
 		server["/robot/showInfo"] = RobotRequests.handler(fromIDAndTypeHandler: self.infoRequest)
+      
+      //Hatchling
+      server["/robot/out/microblocks"] = RobotRequests.handler(fromIDAndTypeHandler: self.sendMicroBlocksData)
 		
 	}
 	
@@ -107,8 +111,14 @@ class RobotRequests {
 			return .badRequest(.text("Invalid robot type: \(typeStr)"))
 		}*/
 		
+      var sUUID = BBTRobotType.Hummingbird.scanningUUID
+      
+      #if HATCHLING
+      sUUID = BBTRobotType.Hatchling.scanningUUID
+      #endif
+
         //TODO: iterate over all available robot types when this becomes possible in new versions of swift
-		bleCenter.startScan(serviceUUIDs: [BBTRobotType.Hummingbird.scanningUUID], updateDiscovered: { (peripherals) in
+		bleCenter.startScan(serviceUUIDs: [sUUID], updateDiscovered: { (peripherals) in
 			let altName = "Fetching name..."
             //let filteredList = peripherals.filter { $0.2 == type }
             let filteredList = peripherals.filter { $0.3 > Date().addingTimeInterval(-3.0) } //remove any robot we have not found in the last 3 seconds
@@ -536,6 +546,29 @@ class RobotRequests {
     
 	
 	//MARK: Outputs
+   
+   
+   private func setPortOff(id: String, type: BBTRobotType,
+                           request: HttpRequest) -> HttpResponse {
+      let queries = BBTSequentialQueryArrayToDict(request.queryParams)
+      
+      guard let portStr = queries["port"], let port = UInt(portStr) else {
+          NSLog("Bad request: \(request.path)")
+          return .badRequest(.text("Missing or invalid parameters"))
+      }
+      
+      let (roboto, requesto) = self.getRobotOrResponse(id: id, type: type,
+                                                       acceptTypes: [.Hatchling])
+      guard let robot = roboto else {
+          return requesto!
+      }
+      
+      if robot.setTriLED(port: port, intensities: BBTTriLED(0, 0, 0)) { //Just need to set all 3 values to 0
+          return .ok(.text("set"))
+      } else {
+          return .internalServerError
+      }
+   }
     
     private func setNeopixStripRequest(id: String, type: BBTRobotType,
                                   request: HttpRequest) -> HttpResponse {
@@ -552,8 +585,14 @@ class RobotRequests {
             return requesto!
         }
         
-        let colorArray = colors.split(",").compactMap{ UInt8($0) }
-        guard colorArray.count == 12 else {
+       var colorList = colors.split(",")
+       if colorList[3] == "all" {
+          colorList.removeLast()
+          colorList = colorList + colorList + colorList + colorList
+       }
+       
+        let colorArray = colorList.compactMap{ UInt8($0) }
+        guard colorArray.count == 12 || colorArray.count == 4 else {
             NSLog("Bad request: \(request.path)")
             return .badRequest(.text("Missing or invalid parameters"))
         }
@@ -944,5 +983,28 @@ class RobotRequests {
         } else {
             return .internalServerError
         }
+    }
+    
+    private func sendMicroBlocksData(id: String, type: BBTRobotType,
+                                     request: HttpRequest) -> HttpResponse {
+        let (roboto, requesto) = self.getRobotOrResponse(id: id, type: type,
+                                                         acceptTypes: [.Hatchling])
+        
+        let queries = BBTSequentialQueryArrayToDict(request.queryParams)
+        guard let dataString = queries["data"]  else {
+            return .badRequest(.text("Poorly formed write request."))
+        }
+        let data = dataString.components(separatedBy: ",").compactMap{ UInt8($0) }
+        
+        guard let robot = roboto else {
+            return requesto!
+        }
+        
+        if robot.sendMicroBlocksData(data) {
+            return .ok(.text("microblocks data sent"))
+        } else {
+            return .internalServerError
+        }
+        
     }
 }
