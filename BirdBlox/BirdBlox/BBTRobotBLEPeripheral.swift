@@ -400,11 +400,14 @@ class BBTRobotBLEPeripheral: NSObject, CBPeripheralDelegate {
         if (inData.count <= type.sensorByteCount) {
             inData.copyBytes(to: &self.lastSensorUpdate, count: inData.count)
         } else {
-            NSLog("Data in exceeds sensor byte count.")
+            NSLog("Data in exceeds sensor byte count (\(type.sensorByteCount)): \(inData)")
+            print(inData.map { String(format: "%03d", $0) }.joined(separator: ","))
+            return
         }
         
         if type == .Hatchling {
-            let _ = FrontendCallbackCenter.shared.robotUpdateHLState(state: self.sensorValues)
+            let _ = FrontendCallbackCenter.shared.robotUpdateHLState(state: [UInt8](inData))
+            return
         }
         
         //The finch will send a flag when it is done with motion commands that have specific distances

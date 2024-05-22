@@ -99,6 +99,9 @@ SFSafariViewControllerDelegate, WKNavigationDelegate {
         //webView.navigationDelegate = self
         //webView.uiDelegate = self
 		
+        if #available(macCatalyst 16.4, iOS 16.4, *) {
+                self.webView.isInspectable = true
+        } 
         self.webView.navigationDelegate = self
 		self.webView.contentMode = UIView.ContentMode.scaleToFill
 		self.webView.backgroundColor = UIColor.gray

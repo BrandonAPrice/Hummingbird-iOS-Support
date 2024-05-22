@@ -298,7 +298,7 @@ enum BBTRobotType {
         case .Finch: return 20
         case .HummingbirdBit: return 16 //14 for V1
         case .MicroBit: return 16 //14 for V1
-        case .Hatchling: return 20
+        case .Hatchling: return 512 //Hatchling returns much more than sensor data.
         }
     }
     
