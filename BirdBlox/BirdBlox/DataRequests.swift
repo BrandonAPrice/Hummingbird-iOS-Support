@@ -52,9 +52,15 @@ class DataManager: NSObject {
 		let alreadyAvailable = DataModel.shared.filenameAvailable(name: name, type: type)
 		let availableName = DataModel.shared.availableName(from: name, type: type)!
 		
-		let json: [String : Any] = ["availableName" : availableName,
+		var json: [String : Any] = ["availableName" : availableName,
 		                            "alreadySanitized" : alreadySanitized,
 									"alreadyAvailable" : alreadyAvailable]
+        
+        #if HATCHLING
+            json["alreadySanitized"] = true
+            json["alreadyAvailable"] = true
+        #endif
+        
 		return .ok(.json(json as AnyObject))
 	}
     

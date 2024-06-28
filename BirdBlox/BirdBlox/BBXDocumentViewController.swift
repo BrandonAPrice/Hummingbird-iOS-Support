@@ -336,7 +336,13 @@ SFSafariViewControllerDelegate, WKNavigationDelegate {
 	}
 	
 	var statusBarHeight: CGFloat {
-		let barSize: CGSize = UIApplication.shared.statusBarFrame.size
+		//let barSize: CGSize = UIApplication.shared.statusBarFrame.size
+        var barSize: CGSize = CGSize()
+        if #available(iOS 13.1, *) {
+            barSize = view.window?.windowScene?.statusBarManager?.statusBarFrame.size ?? CGSize()
+        } else {
+            barSize = UIApplication.shared.statusBarFrame.size
+        }
 		return min(barSize.width, barSize.height)
 	}
 	
@@ -396,8 +402,10 @@ SFSafariViewControllerDelegate, WKNavigationDelegate {
 	var hostDeviceManager: HostDeviceManager? = nil
 	
 	func addHandlersToServer(_ server: BBTBackendServer) {
+        #if !HATCHLING
 		hostDeviceManager = (hostDeviceManager != nil ?
 			hostDeviceManager : HostDeviceManager(view_controller: self))
+        #endif
 		dataRequests = dataRequests != nil ? dataRequests :  DataManager(view_controller: self)
 		
 		//Requests to load parts of the frontend
@@ -412,7 +420,7 @@ SFSafariViewControllerDelegate, WKNavigationDelegate {
 //		flutterManager.loadRequests(server: server)
 		robotRequests.loadRequests(server: server)
 		dataRequests!.loadRequests(server: server)
-		hostDeviceManager!.loadRequests(server: server)
+		hostDeviceManager?.loadRequests(server: server)
 		soundManager.loadRequests(server: server)
 		settingsManager.loadRequests(server: server)
 		propertiesManager.loadRequests(server: server)

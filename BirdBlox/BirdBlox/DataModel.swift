@@ -383,10 +383,21 @@ class DataModel: NSObject, FileManagerDelegate {
 		return self.availableNameRecHelper(from: DataModel.sanitizedName(of: name), type: type)
 	}
 	
-	func availableNameRecHelper(from name: String, type: BBXFileType) -> String {
+	func availableNameRecHelper(from origName: String, type: BBXFileType) -> String {
+        var name = origName
+        
 		if self.filenameAvailable(name: name, type: type) {
 			return name
 		}
+        
+        var addlSuffix = ""
+        #if HATCHLING
+        if name[name.index(name.endIndex, offsetBy: -2)] == "-" {
+            print("found hatchling name \(name)")
+            addlSuffix = "-\(name[name.index(name.endIndex, offsetBy: -1)])"
+            name = String(name.prefix(name.count - 2))
+        }
+        #endif
 		
 		let suffixNumO = self.getNumberSuffix(from: name)
 		var suffixNum: UInt = 2
@@ -396,7 +407,7 @@ class DataModel: NSObject, FileManagerDelegate {
 			prefixName = self.getRootOf(name: name)
 		}
 		
-		return availableNameRecHelper(from: "\(prefixName)(\(suffixNum))", type: type)
+		return availableNameRecHelper(from: "\(prefixName)(\(suffixNum))\(addlSuffix)", type: type)
 	}
 	
 	//MARK: Managing BBX Programs

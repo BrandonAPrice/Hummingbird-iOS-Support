@@ -95,8 +95,8 @@ class FrontendCallbackCenter {
 	
 	//MARK: Robot Related
     public func robotUpdateHLState(state: [UInt8]) -> Bool {
-        NSLog("setHLState")
-        NSLog(state.map({String($0)}).joined(separator: ",")) 
+        //NSLog("setHLState")
+        //NSLog(state.map({String($0)}).joined(separator: ",")) 
         let function = "CallbackManager.robot.setHLState"
         let parameters = [state.map({ String($0) }).joined(separator: ", ")]
 

@@ -10,9 +10,9 @@ import CoreBluetooth
 
 // This wraps the method of getting the state in iOS versions prior to iOS10
 extension CBCentralManager {
-	internal var centralManagerState: CBCentralManagerState  {
+	internal var centralManagerState: CBManagerState  {
 		get {
-			return CBCentralManagerState(rawValue: state.rawValue) ?? .unknown
+			return CBManagerState(rawValue: state.rawValue) ?? .unknown
 		}
 	}
 }
@@ -360,26 +360,26 @@ class BLECentralManager: NSObject, CBCentralManagerDelegate {
 	func centralManagerDidUpdateState(_ central: CBCentralManager) {
 		
 		switch (central.centralManagerState) {
-		case CBCentralManagerState.poweredOff:
+		case CBManagerState.poweredOff:
 			break
 			
-		case CBCentralManagerState.unauthorized:
+		case CBManagerState.unauthorized:
 			// Indicate to user that the iOS device does not support BLE.
 			break
 			
-		case CBCentralManagerState.unknown:
+		case CBManagerState.unknown:
 			// Wait for another event
 			break
 			
-		case CBCentralManagerState.poweredOn:
+		case CBManagerState.poweredOn:
 			//startScanning
 			break
 			
-		case CBCentralManagerState.resetting:
+		case CBManagerState.resetting:
 			//nothing to do
 			break
 			
-		case CBCentralManagerState.unsupported:
+		case CBManagerState.unsupported:
 			break
             
         @unknown default:
