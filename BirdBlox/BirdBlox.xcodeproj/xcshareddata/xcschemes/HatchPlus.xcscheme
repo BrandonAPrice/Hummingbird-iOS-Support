@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3178A51D2D2839CC00754CEA"
-               BuildableName = "HatchPlus.app"
-               BlueprintName = "HatchPlus"
+               BuildableName = "HatchBlox.app"
+               BlueprintName = "HatchBlox"
                ReferencedContainer = "container:BirdBlox.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3178A51D2D2839CC00754CEA"
-            BuildableName = "HatchPlus.app"
-            BlueprintName = "HatchPlus"
+            BuildableName = "HatchBlox.app"
+            BlueprintName = "HatchBlox"
             ReferencedContainer = "container:BirdBlox.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3178A51D2D2839CC00754CEA"
-            BuildableName = "HatchPlus.app"
-            BlueprintName = "HatchPlus"
+            BuildableName = "HatchBlox.app"
+            BlueprintName = "HatchBlox"
             ReferencedContainer = "container:BirdBlox.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

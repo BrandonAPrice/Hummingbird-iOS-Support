@@ -161,13 +161,13 @@
 		1CBEFB40603958D76A5BFE44 /* Pods-BirdBlox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdBlox.release.xcconfig"; path = "Pods/Target Support Files/Pods-BirdBlox/Pods-BirdBlox.release.xcconfig"; sourceTree = "<group>"; };
 		3123E733222EBE77003B572C /* FinchBlox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinchBlox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3123E734222EBE78003B572C /* FinchBlox-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FinchBlox-Info.plist"; path = "/Users/krissie/Dropbox (Krissie Lauwers Work)/BirdBrain/GitHub/Hummingbird-iOS-Support/BirdBlox/FinchBlox-Info.plist"; sourceTree = "<absolute>"; };
-		31403F402978442200222E0D /* Hatchling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hatchling.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31403F402978442200222E0D /* Hatchicons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hatchicons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31403F412978442300222E0D /* Hatchling-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Hatchling-Info.plist"; path = "/Users/krissie/Dropbox (Krissie Lauwers Work)/BirdBrain/GitHub/Hummingbird-iOS-Support/BirdBlox/Hatchling-Info.plist"; sourceTree = "<absolute>"; };
 		31665820217A2B1D00B17C20 /* BirdBlox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BirdBlox-Bridging-Header.h"; sourceTree = "<group>"; };
 		31665821217A2B1D00B17C20 /* AVAudioSessionPatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVAudioSessionPatch.m; sourceTree = "<group>"; };
 		31665823217A2B4400B17C20 /* AVAudioSessionPatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVAudioSessionPatch.h; sourceTree = "<group>"; };
 		31686091209A615C008D92AF /* BBTRobotType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBTRobotType.swift; sourceTree = "<group>"; };
-		3178A54C2D2839CC00754CEA /* HatchPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HatchPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3178A54C2D2839CC00754CEA /* HatchBlox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HatchBlox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3178A54D2D2839CD00754CEA /* HatchPlus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HatchPlus-Info.plist"; path = "/Users/krissie/Dropbox (Krissie Lauwers Work)/BirdBrain/GitHub/Hummingbird-iOS-Support/BirdBlox/HatchPlus-Info.plist"; sourceTree = "<absolute>"; };
 		3188E84A2108B68C00AD54AB /* String+File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+File.swift"; sourceTree = "<group>"; };
 		3188E84C2108B70D00AD54AB /* String+Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Misc.swift"; sourceTree = "<group>"; };
@@ -310,8 +310,8 @@
 			children = (
 				BA81694D1E81A98A00AAF7A3 /* BirdBlox.app */,
 				3123E733222EBE77003B572C /* FinchBlox.app */,
-				31403F402978442200222E0D /* Hatchling.app */,
-				3178A54C2D2839CC00754CEA /* HatchPlus.app */,
+				31403F402978442200222E0D /* Hatchicons.app */,
+				3178A54C2D2839CC00754CEA /* HatchBlox.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -397,9 +397,9 @@
 			productReference = 3123E733222EBE77003B572C /* FinchBlox.app */;
 			productType = "com.apple.product-type.application";
 		};
-		31403F112978442200222E0D /* Hatchling */ = {
+		31403F112978442200222E0D /* Hatchicons */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 31403F3D2978442200222E0D /* Build configuration list for PBXNativeTarget "Hatchling" */;
+			buildConfigurationList = 31403F3D2978442200222E0D /* Build configuration list for PBXNativeTarget "Hatchicons" */;
 			buildPhases = (
 				31403F122978442200222E0D /* [CP] Check Pods Manifest.lock */,
 				31403F132978442200222E0D /* Sources */,
@@ -412,14 +412,14 @@
 			);
 			dependencies = (
 			);
-			name = Hatchling;
+			name = Hatchicons;
 			productName = BirdBlox;
-			productReference = 31403F402978442200222E0D /* Hatchling.app */;
+			productReference = 31403F402978442200222E0D /* Hatchicons.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3178A51D2D2839CC00754CEA /* HatchPlus */ = {
+		3178A51D2D2839CC00754CEA /* HatchBlox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3178A5492D2839CC00754CEA /* Build configuration list for PBXNativeTarget "HatchPlus" */;
+			buildConfigurationList = 3178A5492D2839CC00754CEA /* Build configuration list for PBXNativeTarget "HatchBlox" */;
 			buildPhases = (
 				3178A51E2D2839CC00754CEA /* [CP] Check Pods Manifest.lock */,
 				3178A51F2D2839CC00754CEA /* Sources */,
@@ -432,9 +432,9 @@
 			);
 			dependencies = (
 			);
-			name = HatchPlus;
+			name = HatchBlox;
 			productName = BirdBlox;
-			productReference = 3178A54C2D2839CC00754CEA /* HatchPlus.app */;
+			productReference = 3178A54C2D2839CC00754CEA /* HatchBlox.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BA81694C1E81A98A00AAF7A3 /* BirdBlox */ = {
@@ -506,8 +506,8 @@
 			targets = (
 				BA81694C1E81A98A00AAF7A3 /* BirdBlox */,
 				3123E704222EBE77003B572C /* FinchBlox */,
-				31403F112978442200222E0D /* Hatchling */,
-				3178A51D2D2839CC00754CEA /* HatchPlus */,
+				31403F112978442200222E0D /* Hatchicons */,
+				3178A51D2D2839CC00754CEA /* HatchBlox */,
 			);
 		};
 /* End PBXProject section */
@@ -1013,10 +1013,12 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BirdBlox/BirdBlox.entitlements;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = N6XC9HC8PB;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Hatchling-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Hatchicons;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1044,10 +1046,12 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BirdBlox/BirdBlox.entitlements;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = N6XC9HC8PB;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Hatchling-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Hatchicons;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1074,10 +1078,12 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BirdBlox/BirdBlox.entitlements;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = N6XC9HC8PB;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/HatchPlus-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = HatchBlox;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1105,10 +1111,12 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BirdBlox/BirdBlox.entitlements;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = N6XC9HC8PB;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/HatchPlus-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = HatchBlox;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1307,7 +1315,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		31403F3D2978442200222E0D /* Build configuration list for PBXNativeTarget "Hatchling" */ = {
+		31403F3D2978442200222E0D /* Build configuration list for PBXNativeTarget "Hatchicons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				31403F3E2978442200222E0D /* Debug */,
@@ -1316,7 +1324,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3178A5492D2839CC00754CEA /* Build configuration list for PBXNativeTarget "HatchPlus" */ = {
+		3178A5492D2839CC00754CEA /* Build configuration list for PBXNativeTarget "HatchBlox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3178A54A2D2839CC00754CEA /* Debug */,
