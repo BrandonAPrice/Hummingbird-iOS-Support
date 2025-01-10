@@ -42,7 +42,6 @@
 		3123E729222EBE77003B572C /* Frontend in Resources */ = {isa = PBXBuildFile; fileRef = BA8169651E81B17600AAF7A3 /* Frontend */; };
 		3123E72A222EBE77003B572C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8169591E81A98A00AAF7A3 /* LaunchScreen.storyboard */; };
 		3123E72B222EBE77003B572C /* BluetoothDeviceNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE5C65C1ED8974100433262 /* BluetoothDeviceNames.plist */; };
-		3123E72C222EBE77003B572C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8169571E81A98A00AAF7A3 /* Assets.xcassets */; };
 		3123E72D222EBE77003B572C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8169541E81A98A00AAF7A3 /* Main.storyboard */; };
 		31403F142978442200222E0D /* BBTBackendServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F6D281EDDB3A800799277 /* BBTBackendServer.swift */; };
 		31403F152978442200222E0D /* SharedUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1FD9F1E920A6600304BEE /* SharedUtilities.swift */; };
@@ -79,10 +78,49 @@
 		31403F362978442200222E0D /* Frontend in Resources */ = {isa = PBXBuildFile; fileRef = BA8169651E81B17600AAF7A3 /* Frontend */; };
 		31403F372978442200222E0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8169591E81A98A00AAF7A3 /* LaunchScreen.storyboard */; };
 		31403F382978442200222E0D /* BluetoothDeviceNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE5C65C1ED8974100433262 /* BluetoothDeviceNames.plist */; };
-		31403F392978442200222E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8169571E81A98A00AAF7A3 /* Assets.xcassets */; };
 		31403F3A2978442200222E0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8169541E81A98A00AAF7A3 /* Main.storyboard */; };
 		31665822217A2B1D00B17C20 /* AVAudioSessionPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 31665821217A2B1D00B17C20 /* AVAudioSessionPatch.m */; };
 		31686092209A615C008D92AF /* BBTRobotType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31686091209A615C008D92AF /* BBTRobotType.swift */; };
+		3178A5202D2839CC00754CEA /* BBTBackendServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5F6D281EDDB3A800799277 /* BBTBackendServer.swift */; };
+		3178A5212D2839CC00754CEA /* SharedUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1FD9F1E920A6600304BEE /* SharedUtilities.swift */; };
+		3178A5222D2839CC00754CEA /* BBTRobotBLEPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA170E1F1D492B0085CE71 /* BBTRobotBLEPeripheral.swift */; };
+		3178A5232D2839CC00754CEA /* BBTRobotState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7D5E21EF2E65800FE4882 /* BBTRobotState.swift */; };
+		3178A5242D2839CC00754CEA /* BBTRobotType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31686091209A615C008D92AF /* BBTRobotType.swift */; };
+		3178A5252D2839CC00754CEA /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4AF9C2108AF480097CE01 /* Socket.swift */; };
+		3178A5262D2839CC00754CEA /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4AF962108AE8E0097CE01 /* HttpRequest.swift */; };
+		3178A5272D2839CC00754CEA /* DeviceUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E4A721ED37D3900369F70 /* DeviceUtilities.swift */; };
+		3178A5282D2839CC00754CEA /* Errno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4AF9E2108AFD50097CE01 /* Errno.swift */; };
+		3178A5292D2839CC00754CEA /* BBXDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4F8A61F02F2BB005EB384 /* BBXDocument.swift */; };
+		3178A52A2D2839CC00754CEA /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A75981EB27CF700ECFABC /* AudioManager.swift */; };
+		3178A52B2D2839CC00754CEA /* SettingsRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A759A1EB2817E00ECFABC /* SettingsRequests.swift */; };
+		3178A52C2D2839CC00754CEA /* PropertiesRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDE24E71ED36910000BC24B /* PropertiesRequests.swift */; };
+		3178A52D2D2839CC00754CEA /* FrontendRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8169671E81B72D00AAF7A3 /* FrontendRequests.swift */; };
+		3178A52E2D2839CC00754CEA /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA81696A1E81B7BC00AAF7A3 /* DataModel.swift */; };
+		3178A52F2D2839CC00754CEA /* AVAudioSessionPatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 31665821217A2B1D00B17C20 /* AVAudioSessionPatch.m */; };
+		3178A5302D2839CC00754CEA /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4AFA02108B09C0097CE01 /* Files.swift */; };
+		3178A5312D2839CC00754CEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8169501E81A98A00AAF7A3 /* AppDelegate.swift */; };
+		3178A5322D2839CC00754CEA /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4AF982108AEC30097CE01 /* HttpResponse.swift */; };
+		3178A5332D2839CC00754CEA /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA81696C1E81BC3F00AAF7A3 /* StringExtensions.swift */; };
+		3178A5342D2839CC00754CEA /* SoundRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A75961EB27A8C00ECFABC /* SoundRequests.swift */; };
+		3178A5352D2839CC00754CEA /* DataRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A75921EB2481F00ECFABC /* DataRequests.swift */; };
+		3178A5362D2839CC00754CEA /* RobotRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F72461F223D2000C29FEB /* RobotRequests.swift */; };
+		3178A5372D2839CC00754CEA /* HostDeviceRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A75941EB2519200ECFABC /* HostDeviceRequests.swift */; };
+		3178A5382D2839CC00754CEA /* String+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3188E84A2108B68C00AD54AB /* String+File.swift */; };
+		3178A5392D2839CC00754CEA /* FrontendCallbackCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEC5DA31EF987640067C41B /* FrontendCallbackCenter.swift */; };
+		3178A53A2D2839CC00754CEA /* String+Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3188E84C2108B70D00AD54AB /* String+Misc.swift */; };
+		3178A53B2D2839CC00754CEA /* CallbackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF13C051F15692F00D1F358 /* CallbackManager.swift */; };
+		3178A53C2D2839CC00754CEA /* BLECentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE2EBCE1E84417000198B19 /* BLECentralManager.swift */; };
+		3178A53D2D2839CC00754CEA /* HttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4AF9A2108AEF50097CE01 /* HttpRouter.swift */; };
+		3178A53E2D2839CC00754CEA /* BBXDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4F8A81F03EE56005EB384 /* BBXDocumentViewController.swift */; };
+		3178A5402D2839CC00754CEA /* Pods_BirdBlox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B9CF54964A1E1D488464E38 /* Pods_BirdBlox.framework */; };
+		3178A5422D2839CC00754CEA /* Frontend in Resources */ = {isa = PBXBuildFile; fileRef = BA8169651E81B17600AAF7A3 /* Frontend */; };
+		3178A5432D2839CC00754CEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8169591E81A98A00AAF7A3 /* LaunchScreen.storyboard */; };
+		3178A5442D2839CC00754CEA /* BluetoothDeviceNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FE5C65C1ED8974100433262 /* BluetoothDeviceNames.plist */; };
+		3178A5452D2839CC00754CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8169571E81A98A00AAF7A3 /* Assets.xcassets */; };
+		3178A5462D2839CC00754CEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8169541E81A98A00AAF7A3 /* Main.storyboard */; };
+		3178A54E2D28479C00754CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8169571E81A98A00AAF7A3 /* Assets.xcassets */; };
+		3178A54F2D28479D00754CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8169571E81A98A00AAF7A3 /* Assets.xcassets */; };
+		3178A5502D28479E00754CEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8169571E81A98A00AAF7A3 /* Assets.xcassets */; };
 		3188E84B2108B68C00AD54AB /* String+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3188E84A2108B68C00AD54AB /* String+File.swift */; };
 		3188E84D2108B70D00AD54AB /* String+Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3188E84C2108B70D00AD54AB /* String+Misc.swift */; };
 		31A4AF972108AE8E0097CE01 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4AF962108AE8E0097CE01 /* HttpRequest.swift */; };
@@ -104,7 +142,6 @@
 		3FFA170F1F1D492B0085CE71 /* BBTRobotBLEPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA170E1F1D492B0085CE71 /* BBTRobotBLEPeripheral.swift */; };
 		BA8169511E81A98A00AAF7A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8169501E81A98A00AAF7A3 /* AppDelegate.swift */; };
 		BA8169561E81A98A00AAF7A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8169541E81A98A00AAF7A3 /* Main.storyboard */; };
-		BA8169581E81A98A00AAF7A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8169571E81A98A00AAF7A3 /* Assets.xcassets */; };
 		BA81695B1E81A98A00AAF7A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8169591E81A98A00AAF7A3 /* LaunchScreen.storyboard */; };
 		BA8169681E81B72D00AAF7A3 /* FrontendRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8169671E81B72D00AAF7A3 /* FrontendRequests.swift */; };
 		BA81696B1E81B7BC00AAF7A3 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA81696A1E81B7BC00AAF7A3 /* DataModel.swift */; };
@@ -130,6 +167,8 @@
 		31665821217A2B1D00B17C20 /* AVAudioSessionPatch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVAudioSessionPatch.m; sourceTree = "<group>"; };
 		31665823217A2B4400B17C20 /* AVAudioSessionPatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVAudioSessionPatch.h; sourceTree = "<group>"; };
 		31686091209A615C008D92AF /* BBTRobotType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBTRobotType.swift; sourceTree = "<group>"; };
+		3178A54C2D2839CC00754CEA /* HatchPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HatchPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3178A54D2D2839CD00754CEA /* HatchPlus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HatchPlus-Info.plist"; path = "/Users/krissie/Dropbox (Krissie Lauwers Work)/BirdBrain/GitHub/Hummingbird-iOS-Support/BirdBlox/HatchPlus-Info.plist"; sourceTree = "<absolute>"; };
 		3188E84A2108B68C00AD54AB /* String+File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+File.swift"; sourceTree = "<group>"; };
 		3188E84C2108B70D00AD54AB /* String+Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Misc.swift"; sourceTree = "<group>"; };
 		31A4AF962108AE8E0097CE01 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
@@ -185,6 +224,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				31403F342978442200222E0D /* Pods_BirdBlox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3178A53F2D2839CC00754CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3178A5402D2839CC00754CEA /* Pods_BirdBlox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +311,7 @@
 				BA81694D1E81A98A00AAF7A3 /* BirdBlox.app */,
 				3123E733222EBE77003B572C /* FinchBlox.app */,
 				31403F402978442200222E0D /* Hatchling.app */,
+				3178A54C2D2839CC00754CEA /* HatchPlus.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -284,6 +332,7 @@
 				BA81695C1E81A98A00AAF7A3 /* Info.plist */,
 				3123E734222EBE78003B572C /* FinchBlox-Info.plist */,
 				31403F412978442300222E0D /* Hatchling-Info.plist */,
+				3178A54D2D2839CD00754CEA /* HatchPlus-Info.plist */,
 				BA81696C1E81BC3F00AAF7A3 /* StringExtensions.swift */,
 			);
 			path = BirdBlox;
@@ -368,6 +417,26 @@
 			productReference = 31403F402978442200222E0D /* Hatchling.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3178A51D2D2839CC00754CEA /* HatchPlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3178A5492D2839CC00754CEA /* Build configuration list for PBXNativeTarget "HatchPlus" */;
+			buildPhases = (
+				3178A51E2D2839CC00754CEA /* [CP] Check Pods Manifest.lock */,
+				3178A51F2D2839CC00754CEA /* Sources */,
+				3178A53F2D2839CC00754CEA /* Frameworks */,
+				3178A5412D2839CC00754CEA /* Resources */,
+				3178A5472D2839CC00754CEA /* [CP] Embed Pods Frameworks */,
+				3178A5482D2839CC00754CEA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HatchPlus;
+			productName = BirdBlox;
+			productReference = 3178A54C2D2839CC00754CEA /* HatchPlus.app */;
+			productType = "com.apple.product-type.application";
+		};
 		BA81694C1E81A98A00AAF7A3 /* BirdBlox */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA81695F1E81A98A00AAF7A3 /* Build configuration list for PBXNativeTarget "BirdBlox" */;
@@ -438,6 +507,7 @@
 				BA81694C1E81A98A00AAF7A3 /* BirdBlox */,
 				3123E704222EBE77003B572C /* FinchBlox */,
 				31403F112978442200222E0D /* Hatchling */,
+				3178A51D2D2839CC00754CEA /* HatchPlus */,
 			);
 		};
 /* End PBXProject section */
@@ -450,8 +520,8 @@
 				3123E729222EBE77003B572C /* Frontend in Resources */,
 				3123E72A222EBE77003B572C /* LaunchScreen.storyboard in Resources */,
 				3123E72B222EBE77003B572C /* BluetoothDeviceNames.plist in Resources */,
-				3123E72C222EBE77003B572C /* Assets.xcassets in Resources */,
 				3123E72D222EBE77003B572C /* Main.storyboard in Resources */,
+				3178A54F2D28479D00754CEA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,8 +532,20 @@
 				31403F362978442200222E0D /* Frontend in Resources */,
 				31403F372978442200222E0D /* LaunchScreen.storyboard in Resources */,
 				31403F382978442200222E0D /* BluetoothDeviceNames.plist in Resources */,
-				31403F392978442200222E0D /* Assets.xcassets in Resources */,
 				31403F3A2978442200222E0D /* Main.storyboard in Resources */,
+				3178A54E2D28479C00754CEA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3178A5412D2839CC00754CEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3178A5422D2839CC00754CEA /* Frontend in Resources */,
+				3178A5432D2839CC00754CEA /* LaunchScreen.storyboard in Resources */,
+				3178A5442D2839CC00754CEA /* BluetoothDeviceNames.plist in Resources */,
+				3178A5452D2839CC00754CEA /* Assets.xcassets in Resources */,
+				3178A5462D2839CC00754CEA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,8 +556,8 @@
 				BA81696E1E81CFBE00AAF7A3 /* Frontend in Resources */,
 				BA81695B1E81A98A00AAF7A3 /* LaunchScreen.storyboard in Resources */,
 				3FE5C65D1ED8974100433262 /* BluetoothDeviceNames.plist in Resources */,
-				BA8169581E81A98A00AAF7A3 /* Assets.xcassets in Resources */,
 				BA8169561E81A98A00AAF7A3 /* Main.storyboard in Resources */,
+				3178A5502D28479E00754CEA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +652,57 @@
 			showEnvVarsInLog = 0;
 		};
 		31403F3C2978442200222E0D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BirdBlox/Pods-BirdBlox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3178A51E2D2839CC00754CEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BirdBlox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3178A5472D2839CC00754CEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BirdBlox/Pods-BirdBlox-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BirdBlox/Pods-BirdBlox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3178A5482D2839CC00754CEA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -714,6 +847,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3178A51F2D2839CC00754CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3178A5202D2839CC00754CEA /* BBTBackendServer.swift in Sources */,
+				3178A5212D2839CC00754CEA /* SharedUtilities.swift in Sources */,
+				3178A5222D2839CC00754CEA /* BBTRobotBLEPeripheral.swift in Sources */,
+				3178A5232D2839CC00754CEA /* BBTRobotState.swift in Sources */,
+				3178A5242D2839CC00754CEA /* BBTRobotType.swift in Sources */,
+				3178A5252D2839CC00754CEA /* Socket.swift in Sources */,
+				3178A5262D2839CC00754CEA /* HttpRequest.swift in Sources */,
+				3178A5272D2839CC00754CEA /* DeviceUtilities.swift in Sources */,
+				3178A5282D2839CC00754CEA /* Errno.swift in Sources */,
+				3178A5292D2839CC00754CEA /* BBXDocument.swift in Sources */,
+				3178A52A2D2839CC00754CEA /* AudioManager.swift in Sources */,
+				3178A52B2D2839CC00754CEA /* SettingsRequests.swift in Sources */,
+				3178A52C2D2839CC00754CEA /* PropertiesRequests.swift in Sources */,
+				3178A52D2D2839CC00754CEA /* FrontendRequests.swift in Sources */,
+				3178A52E2D2839CC00754CEA /* DataModel.swift in Sources */,
+				3178A52F2D2839CC00754CEA /* AVAudioSessionPatch.m in Sources */,
+				3178A5302D2839CC00754CEA /* Files.swift in Sources */,
+				3178A5312D2839CC00754CEA /* AppDelegate.swift in Sources */,
+				3178A5322D2839CC00754CEA /* HttpResponse.swift in Sources */,
+				3178A5332D2839CC00754CEA /* StringExtensions.swift in Sources */,
+				3178A5342D2839CC00754CEA /* SoundRequests.swift in Sources */,
+				3178A5352D2839CC00754CEA /* DataRequests.swift in Sources */,
+				3178A5362D2839CC00754CEA /* RobotRequests.swift in Sources */,
+				3178A5372D2839CC00754CEA /* HostDeviceRequests.swift in Sources */,
+				3178A5382D2839CC00754CEA /* String+File.swift in Sources */,
+				3178A5392D2839CC00754CEA /* FrontendCallbackCenter.swift in Sources */,
+				3178A53A2D2839CC00754CEA /* String+Misc.swift in Sources */,
+				3178A53B2D2839CC00754CEA /* CallbackManager.swift in Sources */,
+				3178A53C2D2839CC00754CEA /* BLECentralManager.swift in Sources */,
+				3178A53D2D2839CC00754CEA /* HttpRouter.swift in Sources */,
+				3178A53E2D2839CC00754CEA /* BBXDocumentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BA8169491E81A98A00AAF7A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -842,7 +1013,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BirdBlox/BirdBlox.entitlements;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = N6XC9HC8PB;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Hatchling-Info.plist";
@@ -851,7 +1022,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DHATCHLING\" \"-DFINCHBLOX\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.birdbraintechnologies.Hatchling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -873,7 +1044,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BirdBlox/BirdBlox.entitlements;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = N6XC9HC8PB;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Hatchling-Info.plist";
@@ -882,9 +1053,70 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DHATCHLING\" \"-DFINCHBLOX\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.birdbraintechnologies.Hatchling;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "BirdBlox/BirdBlox-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3178A54A2D2839CC00754CEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8B8191F17118ABB8EDC2784 /* Pods-BirdBlox.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-HatchPlus";
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = BirdBlox/BirdBlox.entitlements;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = N6XC9HC8PB;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/HatchPlus-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DHATCHLING\" \"-DFINCHBLOX\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.birdbraintechnologies.HatchPlus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "BirdBlox/BirdBlox-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3178A54B2D2839CC00754CEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CBEFB40603958D76A5BFE44 /* Pods-BirdBlox.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-HatchPlus";
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = BirdBlox/BirdBlox.entitlements;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = N6XC9HC8PB;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/HatchPlus-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.1;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DHATCHLING\" \"-DFINCHBLOX\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.birdbraintechnologies.HatchPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "BirdBlox/BirdBlox-Bridging-Header.h";
@@ -1080,6 +1312,15 @@
 			buildConfigurations = (
 				31403F3E2978442200222E0D /* Debug */,
 				31403F3F2978442200222E0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3178A5492D2839CC00754CEA /* Build configuration list for PBXNativeTarget "HatchPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3178A54A2D2839CC00754CEA /* Debug */,
+				3178A54B2D2839CC00754CEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

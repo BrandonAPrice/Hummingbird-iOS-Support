@@ -29,6 +29,9 @@ class DataManager: NSObject {
         server["/data/delete"] = deleteRequest(request:)
         server["/data/export"] = exportRequest(request:)
 		server["/data/duplicate"] = self.duplicateRequest
+        
+        //Hatchling
+        server["/data/currentFile"] = getCurrentFile(request:)
 		
 		server["/debug/log"] = self.appendLogRequest
 		server["/debug/shareLog"] = self.exportLogRequest
@@ -269,6 +272,15 @@ class DataManager: NSObject {
 		
 		return .ok(.text("ok"))
 	}
+    
+    func getCurrentFile(request: HttpRequest) -> HttpResponse {
+        
+        let curDocName = DataModel.shared.getSetting(BBXDocumentViewController.curDocNameKey)
+        
+        print("Getting the current filename: \(curDocName ?? "nil")")
+        
+        return .ok(.text(curDocName ?? ""))
+    }
     
 	//MARK: Supporting functions
 	func fileType(fromParameter: String) -> DataModel.BBXFileType? {
